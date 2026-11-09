@@ -12,7 +12,7 @@ code/
   03_eda.py                           14 descriptive and diagnostic charts plus auto-written insights
   04_models.py                        classification, clustering, association rules, regression
   05_build_excel.py                   builds the Excel workbook
-  app.py                              Streamlit dashboard
+  app.py                              Streamlit dashboard (9 tabs: overview, cleaning, EDA, 4 models, predictor and business case)
 outputs/
   cleaning_log.txt                    every cleaning step with counts
   eda/                                charts plus eda_insights.txt
