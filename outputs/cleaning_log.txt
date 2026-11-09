@@ -1,0 +1,27 @@
+Raw shape: (2030, 43)
+[1] Dropped 30 exact duplicate submissions -> 2000 rows
+    Dropped 0 repeated Respondent_IDs
+[2] Gender: 9 spellings -> 3 clean categories ['Female', 'Male', 'Other']
+[2] City_Tier: 7 spellings -> 3 clean categories ['Tier 1', 'Tier 2', 'Tier 3']
+[2] Preferred_Payment: 7 spellings -> 4 clean categories ['Campus ID / Wallet', 'Cash', 'Debit/Credit Card', 'UPI']
+[2] Likely_To_Use: 6 spellings -> 2 clean categories ['No', 'Yes']
+[3] 6 impossible ages (outside 16-40) set to missing
+    Cafeteria_Satisfaction: 3 answers outside 1-5 set to missing
+    2 negative spend values set to missing
+[4] Monthly_Allowance_INR: 11 extreme outliers outside [0, 31,300] -> set to missing, then imputed
+    Expected_Monthly_Spend_INR: 4 non-credible values (> Rs.10k or > allowance) -> missing
+    2 allowance entries below Rs.1,000 treated as typos
+[5] Missing values before imputation:
+Age                             6
+Region                         30
+Monthly_Allowance_INR          93
+Hours_On_Campus_Daily          40
+Cafeteria_Wait_Minutes         60
+Cafeteria_Satisfaction          3
+Tech_Comfort                   40
+Health_Consciousness           40
+Preferred_Location             50
+Willing_Price_Per_Drink_INR    40
+Expected_Monthly_Spend_INR      6
+    Missing values after imputation: 0
+[6] Engineered 12 new features; final shape (2000, 55)

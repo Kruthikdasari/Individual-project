@@ -1,0 +1,45 @@
+Note: numeric features are standardised (0 = average, 1 = one std-dev above average)
+
+|--- Num_Beverages_Liked <= 0.54
+|   |--- Monthly_Allowance_INR <= -0.45
+|   |   |--- Cafeteria_Wait_Minutes <= 0.07
+|   |   |   |--- Importance_Convenience <= 0.96
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- Importance_Convenience >  0.96
+|   |   |   |   |--- class: 0
+|   |   |--- Cafeteria_Wait_Minutes >  0.07
+|   |   |   |--- Num_Beverages_Liked <= -0.89
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- Num_Beverages_Liked >  -0.89
+|   |   |   |   |--- truncated branch of depth 2
+|   |--- Monthly_Allowance_INR >  -0.45
+|   |   |--- Importance_Convenience <= -0.15
+|   |   |   |--- Beverages_Per_Week <= 1.12
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- Beverages_Per_Week >  1.12
+|   |   |   |   |--- class: 1
+|   |   |--- Importance_Convenience >  -0.15
+|   |   |   |--- Cafeteria_Satisfaction <= -0.46
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- Cafeteria_Satisfaction >  -0.46
+|   |   |   |   |--- truncated branch of depth 2
+|--- Num_Beverages_Liked >  0.54
+|   |--- Monthly_Allowance_INR <= -0.69
+|   |   |--- Current_Beverage_Source_Campus Cafeteria <= 0.50
+|   |   |   |--- Monthly_Allowance_INR <= -0.98
+|   |   |   |   |--- class: 0
+|   |   |   |--- Monthly_Allowance_INR >  -0.98
+|   |   |   |   |--- class: 0
+|   |   |--- Current_Beverage_Source_Campus Cafeteria >  0.50
+|   |   |   |--- class: 1
+|   |--- Monthly_Allowance_INR >  -0.69
+|   |   |--- Cafeteria_Satisfaction <= 0.47
+|   |   |   |--- Num_Beverages_Liked <= 1.01
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- Num_Beverages_Liked >  1.01
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- Cafeteria_Satisfaction >  0.47
+|   |   |   |--- Importance_Convenience <= -0.15
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- Importance_Convenience >  -0.15
+|   |   |   |   |--- truncated branch of depth 2

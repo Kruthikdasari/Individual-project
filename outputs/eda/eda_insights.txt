@@ -1,0 +1,14 @@
+01_target_split: 47.5% say they would use the machine - a large addressable base and a fairly balanced target for classification.
+02_interest_level: 35.1% rate interest 4 or 5 (top-2-box).
+03_adoption_by_residence: Hostel students adopt most (56.0%) vs day scholars (41.1%) - hostels are the priority install site.
+04_wait_vs_adoption: Adoption rises from 37.6% (0-5 min wait) to 66.7% (20+ min) - queue pain is a core purchase driver.
+05_allowance_vs_adoption_spend: Adoption goes from 25.3% to 74.0% and median spend from Rs.80 to Rs.770 across allowance bands.
+06_payment_preference: 84.3% prefer a cashless method (UPI alone 67.0%) - a cashless-only machine is viable.
+07_beverage_popularity: Top drinks: Cold Coffee (62%), Fresh Juice (51%), Flavoured Milk (48%). Lowest: Protein Shake (29%) - a niche SKU.
+08_spend_distribution: Median spend Rs.700/month for likely users vs Rs.90 for others; distribution is right-skewed (a few heavy users).
+09_wtp_by_tier: Median acceptable price: Tier 1 Rs.69, Tier 2 Rs.54, Tier 3 Rs.42 - price lists should vary by tier.
+10_location_time_heatmap: Most-wanted spots: Academic Block (28%) and Library (25%); late-night demand concentrates at hostels.
+11_correlation_heatmap: (Outcome columns excluded) Strongest positive driver to adoption: Num_Beverages_Liked (r=0.32), Monthly_Allowance_INR (r=0.30); strongest negative: Price_Sensitivity (r=-0.30), Cafeteria_Satisfaction (r=-0.22).
+12_adoption_drivers: Convenience, tech comfort, allowance and queue length push adoption up; price sensitivity and cafeteria satisfaction pull it down.
+13_price_x_tech: Tech-savvy, low-price-sensitivity students adopt at ~90% while price-sensitive, low-tech students adopt at ~0%.
+14_valued_feature: Top value propositions: Lower price than cafe (22%) and No queue / speed (22%).

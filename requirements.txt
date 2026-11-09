@@ -1,0 +1,9 @@
+streamlit>=1.40
+pandas>=2.2
+numpy>=1.26
+plotly>=5.20
+scikit-learn>=1.5
+mlxtend>=0.23
+matplotlib>=3.8
+seaborn>=0.13
+openpyxl>=3.1

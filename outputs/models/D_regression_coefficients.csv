@@ -1,0 +1,46 @@
+,Linear,Ridge,Lasso
+Age,-27.6,5.43,3.65
+Monthly_Allowance_INR,139.73,128.87,134.36
+Hours_On_Campus_Daily,6.25,7.91,1.1
+Beverages_Per_Week,142.87,136.12,142.45
+Cafeteria_Wait_Minutes,39.12,37.36,34.19
+Cafeteria_Satisfaction,-66.0,-61.0,-61.88
+Tech_Comfort,70.39,63.55,65.21
+Health_Consciousness,15.84,15.17,12.38
+Price_Sensitivity,-88.81,-85.46,-83.95
+Importance_Convenience,57.41,55.38,56.97
+Importance_Hygiene,20.86,19.12,15.62
+UPI_Freq_Num,2.16,5.23,1.49
+City_Tier_Num,-15.65,-21.37,-16.83
+Num_Beverages_Liked,92.16,93.47,98.26
+Is_Hostel,76.16,72.21,73.37
+Is_Gym,20.4,18.28,15.15
+Is_Late_Night,53.81,51.83,49.25
+Used_Vending_Flag,20.3,18.87,14.02
+Digital_Payer,9.26,6.79,2.59
+Gender_Male,14.78,8.33,0.0
+Gender_Other,87.42,20.21,0.0
+Year_of_Study_2nd Year,5.26,-10.64,-0.0
+Year_of_Study_3rd Year,54.25,12.34,0.0
+Year_of_Study_4th Year,65.94,6.59,0.0
+Year_of_Study_PhD,153.36,13.89,0.0
+Year_of_Study_Postgraduate,70.69,-1.82,-0.0
+Course_Stream_Commerce,-46.09,-7.59,-0.0
+Course_Stream_Design,-41.03,-3.28,-0.0
+Course_Stream_Engineering,-48.84,-9.11,-0.0
+Course_Stream_Law,-32.91,0.72,0.0
+Course_Stream_Management,-52.8,-10.07,-0.0
+Course_Stream_Medical & Pharmacy,-36.2,0.31,0.0
+Course_Stream_Science,-58.11,-14.98,-0.0
+University_Type_Deemed,24.49,17.89,0.0
+University_Type_Government,0.01,0.21,0.0
+University_Type_Private,-22.36,-16.14,-8.3
+Region_East,-34.25,-9.71,-0.0
+Region_North,-14.64,0.34,0.0
+Region_North-East,74.21,30.54,0.0
+Region_South,-25.64,-5.04,-0.0
+Region_West,-65.59,-33.41,-18.66
+Current_Beverage_Source_Campus Cafeteria,-5.31,2.28,0.0
+Current_Beverage_Source_Campus Kiosk,-18.55,-2.27,-0.0
+Current_Beverage_Source_Food Delivery App,-7.51,1.39,0.0
+Current_Beverage_Source_Nearby Shop / Tapri,-29.56,-14.31,-0.0

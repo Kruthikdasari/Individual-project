@@ -1,0 +1,94 @@
+======================================================================
+A. CLASSIFICATION - predicting Likely_To_Use (Yes/No)
+======================================================================
+Train 1500 / Test 500 rows; Yes-share train 47.5%, test 47.4%
+                 Model  Accuracy  Precision  Recall    F1  ROC_AUC  CV_F1 (5-fold)  Train_Accuracy
+   Logistic Regression     0.744      0.756   0.679 0.716    0.823           0.720           0.755
+Support Vector Machine     0.718      0.740   0.624 0.677    0.799           0.707           0.864
+     Gradient Boosting     0.742      0.748   0.688 0.716    0.797           0.701           0.845
+         Random Forest     0.714      0.726   0.637 0.679    0.792           0.705           0.909
+  K-Nearest Neighbours     0.712      0.734   0.616 0.670    0.768           0.665           0.733
+           Naive Bayes     0.688      0.700   0.599 0.645    0.766           0.684           0.726
+         Decision Tree     0.672      0.671   0.603 0.636    0.729           0.612           0.724
+
+Best model by ROC-AUC: Logistic Regression
+Top 5 drivers (Random Forest): Monthly_Allowance_INR, Num_Beverages_Liked, Cafeteria_Wait_Minutes, Price_Sensitivity, Importance_Convenience
+
+======================================================================
+B. CLUSTERING - K-Means customer segmentation
+======================================================================
+k : silhouette -> 2:0.153, 3:0.129, 4:0.119, 5:0.124, 6:0.124, 7:0.122, 8:0.114
+Segment               Most Probable  Medium Probable  Least Probable
+Size                         662.00           636.00          702.00
+Adoption_Rate                  0.73             0.46            0.25
+Avg_Adoption_Prob              0.71             0.47            0.24
+Median_Allowance           13400.00          6900.00         7800.00
+Drinks_Per_Week                7.84             6.27            5.96
+Cafe_Wait_Min                 12.65            15.93           10.50
+Cafe_Satisfaction              3.06             2.34            3.55
+Tech_Comfort                   3.94             3.41            3.85
+Price_Sensitivity              1.97             3.51            3.28
+Convenience_Imp                3.75             4.18            2.99
+Health                         3.22             3.20            3.18
+Hostel_Share                   0.50             0.49            0.32
+Late_Night_Share               0.59             0.56            0.47
+Digital_Payer_Share            0.85             0.82            0.86
+Drinks_Liked                   5.74             4.47            2.97
+Median_Spend                 780.00           190.00          100.00
+Median_WTP_Per_Drink          75.50            52.00           50.00
+Share_%                       33.10            31.80           35.10
+Silhouette at k=3: 0.129
+
+======================================================================
+C. ASSOCIATION RULES - beverage bundles (Apriori)
+======================================================================
+Frequent itemsets (support >= 10%): 137;  rules (lift>1.1, confidence>=50%): 206
+
+Top 2-item rules (A -> B):
+IF_student_wants THEN_also_wants  support  confidence  lift  n_items
+   Protein_Shake   Coconut_Water    0.148       0.508 1.387        2
+   Coconut_Water        Smoothie    0.198       0.542 1.361        2
+     Fresh_Juice        Smoothie    0.274       0.539 1.352        2
+        Smoothie     Fresh_Juice    0.274       0.689 1.352        2
+   Protein_Shake        Smoothie    0.158       0.538 1.351        2
+   Protein_Shake     Fresh_Juice    0.200       0.684 1.342        2
+        Iced_Tea    Energy_Drink    0.223       0.509 1.340        2
+    Energy_Drink        Iced_Tea    0.223       0.587 1.340        2
+   Coconut_Water     Fresh_Juice    0.248       0.679 1.333        2
+    Energy_Drink     Cold_Coffee    0.288       0.759 1.223        2
+
+Top 3-item rules ({A, B} -> C)  <- 'if they want 2, do they want a 3rd?'
+             IF_student_wants THEN_also_wants  support  confidence  lift  n_items
+  Fresh_Juice + Protein_Shake   Coconut_Water    0.116       0.580 1.585        3
+  Fresh_Juice + Protein_Shake        Smoothie    0.126       0.630 1.581        3
+     Protein_Shake + Smoothie     Fresh_Juice    0.126       0.800 1.570        3
+  Coconut_Water + Fresh_Juice        Smoothie    0.154       0.620 1.555        3
+Coconut_Water + Protein_Shake     Fresh_Juice    0.116       0.781 1.533        3
+       Fresh_Juice + Smoothie   Coconut_Water    0.154       0.561 1.533        3
+ Coconut_Water + Energy_Drink        Iced_Tea    0.100       0.668 1.525        3
+     Coconut_Water + Smoothie     Fresh_Juice    0.154       0.776 1.523        3
+       Fresh_Juice + Iced_Tea   Coconut_Water    0.136       0.551 1.505        3
+          Iced_Tea + Smoothie   Coconut_Water    0.112       0.544 1.485        3
+
+======================================================================
+D. REGRESSION - predicting Expected_Monthly_Spend_INR
+======================================================================
+ Model  R2_test  R2_train  CV_R2 (5-fold)  MAE_Rs  RMSE_Rs  Chosen_alpha  Non_zero_coefs
+Linear    0.552     0.633           0.592 251.818  319.000           NaN              45
+ Ridge    0.562     0.629           0.596 248.570  315.533       116.895              45
+ Lasso    0.562     0.626           0.600 249.045  315.641         4.582              21
+
+Lasso removed 24 weak features: Gender_Male, Gender_Other, Year_of_Study_2nd Year, Year_of_Study_3rd Year, Year_of_Study_4th Year, Year_of_Study_PhD, Year_of_Study_Postgraduate, Course_Stream_Commerce, Course_Stream_Design, Course_Stream_Engineering, Course_Stream_Law, Course_Stream_Management, Course_Stream_Medical & Pharmacy, Course_Stream_Science, University_Type_Deemed, University_Type_Government, Region_East, Region_North, Region_North-East, Region_South, Current_Beverage_Source_Campus Cafeteria, Current_Beverage_Source_Campus Kiosk, Current_Beverage_Source_Food Delivery App, Current_Beverage_Source_Nearby Shop / Tapri
+
+Top 10 spend drivers (Lasso, Rs. change per +1 std-dev / vs base category):
+                        Linear   Ridge   Lasso
+Beverages_Per_Week      142.87  136.12  142.45
+Monthly_Allowance_INR   139.73  128.87  134.36
+Num_Beverages_Liked      92.16   93.47   98.26
+Price_Sensitivity       -88.81  -85.46  -83.95
+Is_Hostel                76.16   72.21   73.37
+Tech_Comfort             70.39   63.55   65.21
+Cafeteria_Satisfaction  -66.00  -61.00  -61.88
+Importance_Convenience   57.41   55.38   56.97
+Is_Late_Night            53.81   51.83   49.25
+Cafeteria_Wait_Minutes   39.12   37.36   34.19

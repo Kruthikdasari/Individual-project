@@ -1,0 +1,4 @@
+Segment,Size,Adoption_Rate,Avg_Adoption_Prob,Median_Allowance,Drinks_Per_Week,Cafe_Wait_Min,Cafe_Satisfaction,Tech_Comfort,Price_Sensitivity,Convenience_Imp,Health,Hostel_Share,Late_Night_Share,Digital_Payer_Share,Drinks_Liked,Median_Spend,Median_WTP_Per_Drink,Share_%
+Most Probable,662,0.73,0.71,13400.0,7.84,12.65,3.06,3.94,1.97,3.75,3.22,0.5,0.59,0.85,5.74,780.0,75.5,33.1
+Medium Probable,636,0.46,0.47,6900.0,6.27,15.93,2.34,3.41,3.51,4.18,3.2,0.49,0.56,0.82,4.47,190.0,52.0,31.8
+Least Probable,702,0.25,0.24,7800.0,5.96,10.5,3.55,3.85,3.28,2.99,3.18,0.32,0.47,0.86,2.97,100.0,50.0,35.1

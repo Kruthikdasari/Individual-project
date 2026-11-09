@@ -1,0 +1,4 @@
+Model,R2_test,R2_train,CV_R2 (5-fold),MAE_Rs,RMSE_Rs,Chosen_alpha,Non_zero_coefs
+Linear,0.552,0.633,0.592,251.818,319.0,,45
+Ridge,0.562,0.629,0.596,248.57,315.533,116.895,45
+Lasso,0.562,0.626,0.6,249.045,315.641,4.582,21
